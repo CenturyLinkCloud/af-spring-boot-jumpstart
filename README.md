@@ -86,6 +86,12 @@ Once the application is running, copy the value for `urls:`, in the case above `
 * Web page: `src/main/webapp/index.html`.
 * Application Controller: `src/main/java/sample/sb/Application.java`.
 * Test: `src/main/java/sample/sb/ApplicationTests.java`.
+* Build script: `build.gradle`
+
+
+### Deploying Java apps to AppFog
+
+A very useful read is [here](https://www.centurylinkcloud.com/knowledge-base/appfog/deploy-java-application/). This will give you an overview of the general process used to deploy Java applications to AppFog.
 
 ### Moving forward
 
