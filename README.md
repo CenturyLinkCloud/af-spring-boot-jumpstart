@@ -79,3 +79,33 @@ Once the application is running, copy the value for `urls:`, in the case above `
 
 <img src="https://raw.githubusercontent.com/CenturyLinkCloud/af-static-jumpstart/master/images/welcome-to-appfog-screenshot.png"/>
  
+## Customizing the app
+
+### Knowing where the code is
+
+* Web page: `src/main/webapp/index.html`.
+* Application Controller: `src/main/java/sample/sb/Application.java`.
+* Test: `src/main/java/sample/sb/ApplicationTests.java`.
+
+### Moving forward
+
+You could add a controller in `src/main/java/sample/sb/`, maybe like this one:
+
+```
+package sample.b;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+public class HelloController {
+
+    @RequestMapping("/hi")
+    public String index() {
+        return "Hey there!";
+    }
+
+}
+```
+
+There are a lot of good examples of Spring Boot applications [here](https://spring.io/guides/).
