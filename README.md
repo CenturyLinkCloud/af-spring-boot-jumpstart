@@ -6,17 +6,24 @@ The AppFog Spring Boot Jumpstart is a sample application that can be used to get
 
 ## Getting Started
 
-### Installing Gradle
+### Build system
 
 This sample application uses Gradle to manage dependencies and build the WAR file that will be later be deployed to AppFog.
-To install Gradle, please follow the steps in https://docs.gradle.org/current/userguide/installation.html
+The repository includes the Gradle wrapper used to bootstrap the build system. For more information, see https://docs.gradle.org/current/userguide/gradle_wrapper.html
 
 ### Building the app and pushing to AppFog
 
-To get started, copy the contents of this repo to a new source code repository that you have edit privileges to. Clone that repository and [login to AppFog](https://www.centurylinkcloud.com/knowledge-base/appfog/login-using-cf-cli/). To deploy the application, run the following from the top-level project directory:
+To get started, copy the contents of this repo to a new source code repository that you have edit privileges to. Clone that repository and [login to AppFog](https://www.centurylinkcloud.com/knowledge-base/appfog/login-using-cf-cli/).
+
+To run the application locally, run the following:
+```
+./gradlew bootRun
+```
+
+To deploy the application, run the following from the top-level project directory:
 
 ```
-$ gradle build
+$ ./gradlew build
 $ cf push
 ```
 
@@ -28,7 +35,7 @@ Using manifest file /Users/demo/projects/af-spring-boot-jumpstart/manifest.yml
 
 Creating app fittable-sketchbook in org DEMO / space Dev as Demouser...
 OK
-h
+
 Creating route fittable-sketchbook.useast.appfog.ctl.io...
 OK
 
@@ -50,10 +57,8 @@ Starting app fittable-sketchbook in org DEMO / space Dev as Demouser...
 
 -----> Uploading droplet (55M)
 
-0 of 1 instances running, 1 starting
-0 of 1 instances running, 1 down
-0 of 1 instances running, 1 starting
-1 of 1 instances running
+0 of 2 instances running, 2 starting
+2 of 2 instances running
 
 App started
 

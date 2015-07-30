@@ -2,5 +2,5 @@
 applications:
 - name: ${random-word}
   memory: 256M
-  instances: 1
+  instances: 2
   path: build/libs/spring-boot-test.war

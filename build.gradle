@@ -21,7 +21,7 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'war'
 
-mainClassName = "sample.sb.Application"
+def mainClassName = "sample.sb.Application"
 
 war {
     baseName = 'spring-boot-test'
@@ -45,5 +45,3 @@ dependencies {
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
-
-task wrapper(type: Wrapper) { gradleVersion = '1.6' }
